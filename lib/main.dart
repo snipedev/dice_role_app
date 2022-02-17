@@ -11,10 +11,36 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: Text('Dice'),
+          backgroundColor: Colors.red,
+        ),
+        body: DicePage(),
+      ),
 
     );
   }
 }
+
+class DicePage extends StatelessWidget {
+  const DicePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+
+        children: <Widget>[
+          Expanded(child: Image.asset('images/dice1.png')),
+          Expanded(child: Image.asset('images/dice2.png'))
+
+        ],
+      ),
+    );
+  }
+}
+
 
 
